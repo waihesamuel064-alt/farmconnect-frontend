@@ -3,6 +3,7 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 import { productService } from "../../services/productService";
 import { orderService } from "../../services/orderService";
 import { inquiryService } from "../../services/inquiryService";
+import SalesSummary from "../../components/SalesSummary";
 
 function FarmerDashboard() {
   const [stats, setStats] = useState(null);
@@ -37,6 +38,7 @@ function FarmerDashboard() {
         <Stat label="Buyer orders" value={stats.orders} />
         <Stat label="Buyer inquiries" value={stats.inquiries} />
       </div>
+      <SalesSummary />
     </>
   );
 }
