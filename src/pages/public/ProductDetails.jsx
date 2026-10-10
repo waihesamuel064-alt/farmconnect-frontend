@@ -9,6 +9,7 @@ import { inquiryService } from "../../services/inquiryService";
 import { favoriteService } from "../../services/favoriteService";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { formatDate } from "../../utils/formatDate";
+import ProductReviews from "../../components/ProductReviews";
 
 const uploadsUrl = import.meta.env.VITE_UPLOADS_URL || "http://localhost:5000";
 
@@ -146,6 +147,7 @@ function ProductDetails() {
           </div>
         </div>
       )}
+       <ProductReviews productId={id} />
     </div>
   );
 }
